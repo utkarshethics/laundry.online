@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laundry-online.pages.dev/sitemap.xml
