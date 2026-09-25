@@ -68,27 +68,45 @@
 
   var bookForm = document.getElementById("bookForm");
   if (bookForm) {
+    var PAY_LINK = "https://razorpay.com/payment-link/plink_TfrpceYFPIv3Ch";
+    var payConfirm = document.getElementById("payConfirm");
+    var payMsgEl = document.getElementById("payMsg");
+    var payWindowOpened = false;
+
     bookForm.addEventListener("submit", function (e) {
       e.preventDefault();
       var name = (document.getElementById("name") || {}).value || "";
       var phone = (document.getElementById("phone") || {}).value || "";
-      if (name.trim() && phone.trim().length >= 10) {
-        var box = document.querySelector("#bookingModal .form-success") ||
-          (function () {
-            var d = document.createElement("div");
-            d.className = "form-success";
-            document.querySelector("#bookingModal .modal").appendChild(d);
-            return d;
-          })();
-        box.style.display = "block";
-        box.innerHTML =
-          '<div class="tick"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>' +
-          "<h3>Order Confirmed!</h3>" +
-          '<p class="sub">Thanks ' + name.trim() + ", our rider will call you on " + phone.trim() +
-          " to confirm the pickup. Free pickup &amp; drop at your doorstep.</p>";
-        var form = document.getElementById("bookForm");
-        if (form) form.style.display = "none";
+      if (!name.trim() || phone.trim().length < 10) return;
+
+      if (!payConfirm || !payConfirm.checked) {
+        if (payMsgEl) {
+          payMsgEl.style.color = "#d93025";
+          payMsgEl.textContent =
+            "Complete the ₹50 advance in the Razorpay window to place your order, then tick the box above and click again.";
+        }
+        if (!payWindowOpened) {
+          payWindowOpened = true;
+          window.open(PAY_LINK, "_blank", "noopener");
+        }
+        return;
       }
+
+      var box = document.querySelector("#bookingModal .form-success") ||
+        (function () {
+          var d = document.createElement("div");
+          d.className = "form-success";
+          document.querySelector("#bookingModal .modal").appendChild(d);
+          return d;
+        })();
+      box.style.display = "block";
+      box.innerHTML =
+        '<div class="tick"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>' +
+        "<h3>Order Confirmed!</h3>" +
+        '<p class="sub">Thanks ' + name.trim() + ", we've received your ₹50 advance. Our rider will call you on " + phone.trim() +
+        " to confirm the pickup. Free pickup &amp; drop at your doorstep.</p>";
+      var form = document.getElementById("bookForm");
+      if (form) form.style.display = "none";
     });
   }
 
