@@ -1,6 +1,12 @@
 name = "laundry-online"
 compatibility_date = "2026-09-24"
-pages_build_output_dir = "."
+
+# Deploy from the staged allowlist, never the repo root. The root layout used
+# to publish every working-tree file, which served .env (live GoDaddy and
+# Cloudflare credentials) at https://laundary.online/.env.
+# Regenerate the staging tree before deploying:
+#   node scripts/build-deploy.mjs && npx wrangler pages deploy
+pages_build_output_dir = "dist/site"
 
 # When a dedicated Laundry payment link is created (user action), set its
 # plink id here so the webhook accepts payments against it:
