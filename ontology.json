@@ -162,8 +162,8 @@
     {
       "@type": "ImageObject",
       "@id": "https://laundary.online/#logo",
-      "url": "https://laundary.online/assets/og-image.png",
-      "contentUrl": "https://laundary.online/assets/og-image.png",
+      "url": "https://laundary.online/assets/og-image.webp",
+      "contentUrl": "https://laundary.online/assets/og-image.webp",
       "width": 1200,
       "height": 630,
       "caption": "laundry.online — Doorstep Laundry & Dry Cleaning"

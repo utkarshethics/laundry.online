@@ -16,7 +16,7 @@ const PHONE = '+91-7892240243';
 const PHONE_INTL = '+917892240243';
 const WHATSAPP = 'https://wa.me/917892240243';
 const SUPPORT_EMAIL = 'support@laundry.online';
-const IMAGE = `${ORIGIN}/assets/og-image.png`;
+const IMAGE = `${ORIGIN}/assets/og-image.webp`;
 
 const CITIES = [
   { name: 'Mumbai', sameAs: 'https://www.wikidata.org/wiki/Q1156' },
