@@ -12,9 +12,9 @@ import { resolve } from 'node:path';
 
 const ORIGIN = 'https://laundary.online';
 const CANONICAL_BRAND = 'laundry.online';
-const PHONE = '+91-9019745931';
-const PHONE_INTL = '+919019745931';
-const WHATSAPP = 'https://wa.me/919019745931';
+const PHONE = '+91-7892240243';
+const PHONE_INTL = '+917892240243';
+const WHATSAPP = 'https://wa.me/917892240243';
 const SUPPORT_EMAIL = 'support@laundry.online';
 const IMAGE = `${ORIGIN}/assets/og-image.png`;
 
@@ -317,6 +317,41 @@ function crumbs(path) {
   return trail;
 }
 
+const FAQ_ITEMS = [
+  {
+    question: 'How does laundry.online doorstep pickup and delivery work?',
+    answer: 'Place your order online or via WhatsApp. A verified logistics rider arrives at your doorstep with a digital hanging scale, measures your garments in your presence, and provides an instant digital receipt. Cleaned and pressed clothes are returned within 24 to 72 hours.',
+  },
+  {
+    question: 'What is the standard turnaround time for laundry and dry cleaning?',
+    answer: 'Standard wash & fold and wash & steam iron takes 48–72 hours. For emergency or business travel requirements, select Express Laundry at checkout for guaranteed 24-hour delivery.',
+  },
+  {
+    question: 'Is doorstep pickup and delivery free of cost?',
+    answer: 'Yes, laundry.online provides 100% free doorstep pickup and delivery on all standard orders across Mumbai, Pune, Bangalore, Delhi NCR, and all served metropolitan areas with zero hidden convenience fees.',
+  },
+  {
+    question: 'What are the charges for online dry cleaning and laundry services in India?',
+    answer: 'Wash & Fold starts at ₹69/kg, Wash & Steam Iron at ₹99/kg, and Professional Eco Dry Cleaning starts at ₹149 per garment piece. Steam pressing is available from ₹29/piece.',
+  },
+  {
+    question: 'Can laundry.online dry cleaners remove tough grease, oil, and turmeric stains?',
+    answer: 'Yes. Our facilities utilize pre-spotting inspection stations with specialized non-toxic enzyme and solvent stain-release agents designed specifically for stubborn oil, coffee, ink, makeup, and turmeric stains without degrading fabric tensile strength.',
+  },
+  {
+    question: 'How are clothes weighed and billed for per-kg laundry?',
+    answer: 'Clothes are weighed directly in front of you at your doorstep using certified electronic hanging scales. The weight is recorded on your digital invoice sent via SMS/WhatsApp before the items leave your premises.',
+  },
+  {
+    question: 'What if a garment gets damaged or lost during processing?',
+    answer: 'Every order is covered by our Garment Care & Quality Guarantee. Each item undergoes 3-stage barcode sorting and tracking, and verified damage claims are reimbursed up to 10x the service charge.',
+  },
+  {
+    question: 'Which cities and regions does laundry.online operate in?',
+    answer: 'laundry.online operates across major Indian metros including Mumbai, Pune, Bengaluru, Delhi NCR (Noida, Gurgaon), Hyderabad, Chennai, Kolkata, Ahmedabad, Jaipur, and Thane.',
+  },
+];
+
 function graphFor(page) {
   const url = page.path === '/' ? `${ORIGIN}/` : `${ORIGIN}${page.path}`;
   const trail = crumbs(page.path);
@@ -347,6 +382,21 @@ function graphFor(page) {
         about: { '@id': `${ORIGIN}/#localbusiness` },
         breadcrumb: { '@id': `${url}#breadcrumb` },
         inLanguage: 'en-IN',
+      }] : []),
+      ...(page.file === 'index.html' ? [{
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        name: 'Frequently Asked Questions About laundry.online Doorstep Laundry',
+        isPartOf: { '@id': `${ORIGIN}/#website` },
+        about: { '@id': `${ORIGIN}/#localbusiness` },
+        mainEntity: FAQ_ITEMS.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
       }] : []),
       {
         '@type': 'BreadcrumbList',

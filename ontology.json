@@ -78,12 +78,12 @@
     {
       "subject": "laundry.online",
       "predicate": "contactPhone",
-      "object": "+91-9019745931"
+      "object": "+91-7892240243"
     },
     {
       "subject": "laundry.online",
       "predicate": "contactWhatsApp",
-      "object": "https://wa.me/919019745931"
+      "object": "https://wa.me/917892240243"
     }
   ],
   "entities": [
@@ -103,10 +103,10 @@
         "@id": "https://laundary.online/#logo"
       },
       "description": "India’s leading doorstep laundry and eco-friendly dry cleaning network providing free pickup and delivery across Mumbai, Pune, Bangalore, Delhi NCR, and 14+ metro cities.",
-      "telephone": "+91-9019745931",
+      "telephone": "+91-7892240243",
       "email": "support@laundry.online",
       "sameAs": [
-        "https://wa.me/919019745931",
+        "https://wa.me/917892240243",
         "https://www.wikidata.org/wiki/Q849495",
         "https://www.wikidata.org/wiki/Q841364"
       ],
@@ -149,7 +149,7 @@
     {
       "@type": "ContactPoint",
       "@id": "https://laundary.online/#contactpoint",
-      "telephone": "+91-9019745931",
+      "telephone": "+91-7892240243",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": [
@@ -201,7 +201,7 @@
       "parentOrganization": {
         "@id": "https://laundary.online/#organization"
       },
-      "telephone": "+91-9019745931",
+      "telephone": "+91-7892240243",
       "email": "support@laundry.online",
       "areaServed": [
         {
@@ -305,7 +305,7 @@
         "@id": "https://laundary.online/#catalog"
       },
       "sameAs": [
-        "https://wa.me/919019745931",
+        "https://wa.me/917892240243",
         "https://www.wikidata.org/wiki/Q849495",
         "https://www.wikidata.org/wiki/Q841364"
       ],

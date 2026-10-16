@@ -89,7 +89,7 @@ const ROOT = process.cwd();
           <li>⚖️ <strong>Digital Scales:</strong> Weighed transparently at your door</li>
           <li>🌱 <strong>Eco-Friendly:</strong> Phosphate-free biodegradable agents</li>
           <li>🛡️ <strong>Fabric Guarantee:</strong> Zero color bleed sorting protocol</li>
-          <li>📞 <strong>Support Desk:</strong> +91-9019745931 / WhatsApp 24/7</li>
+          <li>📞 <strong>Support Desk:</strong> +91-7892240243 / WhatsApp 24/7</li>
         </ul>
       </div>
     </div>
@@ -155,7 +155,7 @@ const ROOT = process.cwd();
     const answerBlock = `<p>Questions about pricing, pickup slots or partnerships? Reach us any way you like — we reply fast.</p>
     <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;">
       <p style="margin:0;font-size:0.98rem;font-weight:500;color:#16233c;line-height:1.7;">
-        <strong>Direct Answer:</strong> Customers can book on-demand laundry pickups or inquire about orders directly via telephone at <strong>+91-9019745931</strong>, instant WhatsApp chat at <strong>https://wa.me/919019745931</strong>, or email at <strong>support@laundry.online</strong>. Operational support hours are Monday through Sunday, 06:00 AM to 09:00 PM IST across Mumbai, Pune, Bangalore, and all partner zones.
+        <strong>Direct Answer:</strong> Customers can book on-demand laundry pickups or inquire about orders directly via telephone at <strong>+91-7892240243</strong>, instant WhatsApp chat at <strong>https://wa.me/917892240243</strong>, or email at <strong>support@laundry.online</strong>. Operational support hours are Monday through Sunday, 06:00 AM to 09:00 PM IST across Mumbai, Pune, Bangalore, and all partner zones.
       </p>
     </div>`;
     html = html.replace(target, answerBlock);
