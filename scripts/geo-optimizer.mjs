@@ -39,14 +39,17 @@ const ROOT = process.cwd();
     '<h2>Frequently Asked Questions About laundry.online Doorstep Laundry</h2>'
   );
 
-  // Direct Answer-First Block insertion right below hero subtitle if not already present
+  // Summary Block insertion right below hero subtitle if not already present
   if (!html.includes('geo-answer-first')) {
     const target = '<p class="sub">Premium laundry &amp; dry cleaning with free doorstep pickup. Transparent per-kg pricing, on-time delivery, and clothes that feel brand new.</p>';
     const answerBlock = `<p class="sub">Premium laundry &amp; dry cleaning with free doorstep pickup. Transparent per-kg pricing, on-time delivery, and clothes that feel brand new.</p>
-      <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;">
-        <p style="margin:0;font-size:0.98rem;font-weight:500;color:#16233c;line-height:1.7;">
-          <strong>Direct Answer:</strong> <strong>laundry.online</strong> is an on-demand doorstep laundry and eco-certified dry cleaning network operating across <strong>Mumbai, Pune, Bangalore, Delhi NCR, Hyderabad, Chennai, and 14+ Indian cities</strong>. laundry.online provides free doorstep pickup and delivery in under 20 seconds of online booking, standard <strong>24–48 hour turnaround</strong> (same-day express available), transparent per-kilogram rates from <strong>₹69/kg for Wash &amp; Fold</strong> and <strong>₹99/kg for Wash &amp; Iron</strong>, and professional garment dry cleaning from <strong>₹149/piece</strong>. Every batch is sanitized with fabric-safe, eco-friendly detergents and digitally weighed at your doorstep.
-        </p>
+      <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;font-size:0.95rem;line-height:1.7;color:#16233c;">
+        <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:6px;">
+          <li><strong>laundry.online</strong> is an on-demand doorstep laundry &amp; eco-certified dry cleaning network operating across <strong>Mumbai, Pune, Bangalore, Delhi NCR, Hyderabad, Chennai, and 14+ Indian cities</strong>.</li>
+          <li><strong>Doorstep Turnaround:</strong> Free pickup and delivery in under 20 seconds of online booking, standard <strong>24–48 hour turnaround</strong> (same-day express available).</li>
+          <li><strong>Transparent Pricing:</strong> Per-kilogram rates from <strong>₹69/kg for Wash &amp; Fold</strong>, <strong>₹99/kg for Wash &amp; Iron</strong>, and dry cleaning from <strong>₹149/piece</strong>.</li>
+          <li><strong>Garment Safety:</strong> Every batch sanitized with fabric-safe, eco-friendly detergents and digitally weighed at your doorstep.</li>
+        </ul>
       </div>`;
     html = html.replace(target, answerBlock);
   }
@@ -124,16 +127,18 @@ const ROOT = process.cwd();
   if (!html.includes('geo-answer-first')) {
     const target = '<p>laundry.online was built on a simple idea: nobody should spend their weekend washing, ironing and folding. Let us handle it while you focus on what matters.</p>';
     const answerBlock = `<p>laundry.online was built on a simple idea: nobody should spend their weekend washing, ironing and folding. Let us handle it while you focus on what matters.</p>
-    <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;">
-      <p style="margin:0;font-size:0.98rem;font-weight:500;color:#16233c;line-height:1.7;">
-        <strong>Direct Answer:</strong> <strong>laundry.online</strong> operates commercial garment processing centers across 20+ Indian metropolitan regions. Founded to eliminate laundry hassle for working urban households, laundry.online combines doorstep collection logistics, computerized fabric-calibrated washing cycles, hygienic steam pressing, and scheduled home delivery backed by a 100% garment safety guarantee and digital scale precision.
-      </p>
+    <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;font-size:0.95rem;line-height:1.7;color:#16233c;">
+      <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:6px;">
+        <li><strong>Commercial Processing:</strong> <strong>laundry.online</strong> operates commercial garment processing centers across <strong>20+ Indian metropolitan regions</strong>.</li>
+        <li><strong>Hassle-Free Logistics:</strong> Combines doorstep collection logistics, computerized fabric-calibrated washing cycles, and hygienic steam pressing.</li>
+        <li><strong>Quality Guarantee:</strong> Scheduled home delivery backed by a <strong>100% garment safety guarantee</strong> and digital scale precision.</li>
+      </ul>
     </div>`;
     html = html.replace(target, answerBlock);
   }
 
   writeFileSync(file, html, 'utf8');
-  console.log('✓ Injected GEO Answer-First & Entity-Rich content into about.html');
+  console.log('✓ Injected GEO summary content into about.html');
 }
 
 // --- 3. Optimize contact.html ---
@@ -153,10 +158,13 @@ const ROOT = process.cwd();
   if (!html.includes('geo-answer-first')) {
     const target = '<p>Questions about pricing, pickup slots or partnerships? Reach us any way you like — we reply fast.</p>';
     const answerBlock = `<p>Questions about pricing, pickup slots or partnerships? Reach us any way you like — we reply fast.</p>
-    <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;">
-      <p style="margin:0;font-size:0.98rem;font-weight:500;color:#16233c;line-height:1.7;">
-        <strong>Direct Answer:</strong> Customers can book on-demand laundry pickups or inquire about orders directly via telephone at <strong>+91-7892240243</strong>, instant WhatsApp chat at <strong>https://wa.me/917892240243</strong>, or email at <strong>support@laundry.online</strong>. Operational support hours are Monday through Sunday, 06:00 AM to 09:00 PM IST across Mumbai, Pune, Bangalore, and all partner zones.
-      </p>
+    <div class="geo-answer-first" style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem 1.25rem;margin:1.25rem 0;border-radius:8px;font-size:0.95rem;line-height:1.7;color:#16233c;">
+      <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:6px;">
+        <li><strong>Telephone Desk:</strong> Direct bookings and support at <strong>+91-7892240243</strong>.</li>
+        <li><strong>WhatsApp Assistance:</strong> Instant chat and order updates at <strong><a href="https://wa.me/917892240243" target="_blank" rel="noopener">wa.me/917892240243</a></strong>.</li>
+        <li><strong>Email Support:</strong> Inquiries at <strong>support@laundry.online</strong>.</li>
+        <li><strong>Operating Hours:</strong> Monday through Sunday, 06:00 AM to 09:00 PM IST across Mumbai, Pune, Bangalore, and all partner zones.</li>
+      </ul>
     </div>`;
     html = html.replace(target, answerBlock);
   }
