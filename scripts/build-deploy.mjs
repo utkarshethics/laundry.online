@@ -28,6 +28,7 @@ const PUBLISH_FILES = [
   'robots.txt',
   'sitemap.xml',
   '_redirects',
+  '_headers',
   'ontology.json',
   'llms.txt',
   // Cloudflare domain-verification file; must stay reachable at the root.
