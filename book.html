@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script defer src="https://analytics-webhook.utkarshethics.workers.dev/beacon.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Pickup — laundary.online</title>
+<meta name="description" content="Schedule a free doorstep laundry pickup with laundary.online. ₹50 slot advance is fully adjusted in your final bill." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="canonical" href="https://laundary.online/book" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <span class="logo">🧺</span>
+      <span>laundary<span style="color:var(--primary)">.online</span><small>Doorstep Laundry</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/#services">Services</a>
+      <a href="/#how">How it Works</a>
+      <a href="/#faq">FAQs</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-accent" href="/book">Book Now</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="kicker">Doorstep Pickup</span>
+    <h1>Book Your Laundry Pickup</h1>
+    <p>Select your service, address, and preferred time slot (8:00 AM – 10:00 PM). ₹50 slot advance is adjusted in your bill.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:760px">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <span>Book Pickup</span>
+    </nav>
+
+    <div class="policy-card" style="padding: 2.2rem;">
+      <h2 style="margin-top:0;">Pickup Details</h2>
+
+      <form id="laundry-book-form" novalidate style="margin-top:1.5rem;">
+        <div style="margin-bottom:1.25rem;">
+          <label for="b-name" style="display:block; font-weight:600; margin-bottom:0.4rem;">Full Name <span style="color:#e11d48;">*</span></label>
+          <input type="text" id="b-name" name="name" required placeholder="e.g. Ramesh Kumar" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+          <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please enter your full name (letters only).</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="margin-bottom:1.25rem;">
+            <label for="b-phone" style="display:block; font-weight:600; margin-bottom:0.4rem;">Mobile Number <span style="color:#e11d48;">*</span></label>
+            <input type="tel" id="b-phone" name="phone" required placeholder="10-digit mobile number" maxlength="10" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+            <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please enter a valid 10-digit mobile number.</span>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <label for="b-email" style="display:block; font-weight:600; margin-bottom:0.4rem;">Email ID <span style="color:#e11d48;">*</span></label>
+            <input type="email" id="b-email" name="email" required placeholder="you@example.com" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+            <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please enter a valid email address.</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <label for="b-address" style="display:block; font-weight:600; margin-bottom:0.4rem;">Complete Address (House, Street, Area) <span style="color:#e11d48;">*</span></label>
+          <textarea id="b-address" name="address" rows="2" required placeholder="Flat/House No, Building, Street, Landmark" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;"></textarea>
+          <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please enter your complete address.</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="margin-bottom:1.25rem;">
+            <label for="b-city" style="display:block; font-weight:600; margin-bottom:0.4rem;">City <span style="color:#e11d48;">*</span></label>
+            <select id="b-city" name="city" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+              <option value="">Select your city</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Pune">Pune</option>
+              <option value="Delhi NCR">Delhi NCR</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Jaipur">Jaipur</option>
+            </select>
+            <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please select your city.</span>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <label for="b-pincode" style="display:block; font-weight:600; margin-bottom:0.4rem;">PIN Code <span style="color:#e11d48;">*</span></label>
+            <input type="text" id="b-pincode" name="pincode" required placeholder="6-digit PIN" maxlength="6" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+            <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please enter a valid 6-digit PIN code.</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <label for="b-service" style="display:block; font-weight:600; margin-bottom:0.4rem;">Service Required <span style="color:#e11d48;">*</span></label>
+          <select id="b-service" name="service" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+            <option value="">Select primary laundry service</option>
+            <option value="Wash & Fold">Wash &amp; Fold (₹69/kg)</option>
+            <option value="Wash & Iron">Wash &amp; Iron (₹99/kg)</option>
+            <option value="Dry Clean">Dry Clean (from ₹149/pc)</option>
+            <option value="Express">Express Laundry 24hr (₹149/kg)</option>
+            <option value="Shoes">Shoe Cleaning (from ₹79/pair)</option>
+            <option value="Blanket">Blanket Wash (from ₹149)</option>
+          </select>
+          <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please select a service.</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="margin-bottom:1.25rem;">
+            <label for="b-date" style="display:block; font-weight:600; margin-bottom:0.4rem;">Pickup Date <span style="color:#e11d48;">*</span></label>
+            <input type="date" id="b-date" name="date" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+            <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please choose a pickup date.</span>
+          </div>
+          <div style="margin-bottom:1.25rem;">
+            <label for="b-slot" style="display:block; font-weight:600; margin-bottom:0.4rem;">Time Slot (8 AM – 10 PM) <span style="color:#e11d48;">*</span></label>
+            <select id="b-slot" name="slot" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem;">
+              <option value="">Select time window</option>
+              <option value="08:00 - 11:00">Morning (8:00 AM – 11:00 AM)</option>
+              <option value="11:00 - 14:00">Mid-day (11:00 AM – 2:00 PM)</option>
+              <option value="14:00 - 17:00">Afternoon (2:00 PM – 5:00 PM)</option>
+              <option value="17:00 - 20:00">Evening (5:00 PM – 8:00 PM)</option>
+              <option value="20:00 - 22:00">Night (8:00 PM – 10:00 PM)</option>
+            </select>
+            <span class="field-error" style="color:#e11d48; font-size:0.85rem; display:none;">Please select a pickup time slot.</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem; display:flex; align-items:flex-start; gap:8px;">
+          <input type="checkbox" id="b-terms" name="terms" required style="margin-top:4px;">
+          <label for="b-terms" style="font-size:0.95rem; color:#475569;">
+            I agree to the <a href="/terms" target="_blank" style="color:var(--primary); text-decoration:underline;">Terms &amp; Conditions</a> and <a href="/cancellation-refund-policy" target="_blank" style="color:var(--primary); text-decoration:underline;">Refund Policy</a>. <span style="color:#e11d48;">*</span>
+          </label>
+        </div>
+
+        <!-- Summary -->
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; margin-bottom:1.5rem;">
+          <h3 style="margin-top:0; margin-bottom:0.75rem; font-size:1.05rem; color:#0f172a;">Order Summary</h3>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; color:#475569;">
+            <span>Pickup Slot Advance:</span>
+            <span style="font-weight:600;">₹50</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; color:#475569;">
+            <span>Doorstep Pickup &amp; Delivery:</span>
+            <span style="font-weight:600; color:#16a34a;">FREE</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; color:#475569;">
+            <span>Taxes / GST:</span>
+            <span style="font-weight:600;">₹0 (No GST added)</span>
+          </div>
+          <hr style="border:0; border-top:1px solid #cbd5e1; margin:0.75rem 0;">
+          <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:700; color:#0f172a;">
+            <span>Total Payable Now:</span>
+            <span style="color:var(--primary);">₹50</span>
+          </div>
+          <p style="font-size:0.85rem; color:#64748b; margin:0.5rem 0 0 0;">(The ₹50 advance is fully adjusted against your final laundry invoice upon digital weighing)</p>
+        </div>
+
+        <p style="font-size:0.9rem; color:#475569; text-align:center; margin-bottom:1.25rem;">
+          You are paying STAGE-X (laundary.online). Your order will be serviced by a partner laundry in your area.
+        </p>
+
+        <button type="submit" id="pay-btn" class="btn btn-primary" style="width:100%; padding:14px; font-size:1.15rem; font-weight:700;">
+          Pay Now (₹50)
+        </button>
+      </form>
+
+      <div id="book-success" style="display:none; text-align:center; padding:2rem 1rem;">
+        <div style="width:60px; height:60px; background:#dcfce7; color:#15803d; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:28px; margin-bottom:1rem;">✓</div>
+        <h3 style="color:#15803d;">Pickup Scheduled!</h3>
+        <p style="color:#475569; line-height:1.6;">Redirecting to secure payment gateway to complete your ₹50 slot advance...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="about">
+      <a class="brand" href="/"><span class="logo">🧺</span><span>laundary<span style="color:#4ea6ff">.online</span></span></a>
+      <p>Premium laundry &amp; dry cleaning delivered to your doorstep. Free pickup &amp; drop, transparent pricing, 24-hour express.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="/">Home</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/book">Book Pickup</a>
+      <a href="/#services">Services</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div>
+      <h4>Our Services</h4>
+      <a href="/pricing">Wash &amp; Fold</a>
+      <a href="/pricing">Wash &amp; Iron</a>
+      <a href="/pricing">Express Laundry</a>
+      <a href="/pricing">Dry Cleaning</a>
+      <a href="/pricing">Shoe Cleaning</a>
+      <a href="/pricing">Blanket &amp; Curtains</a>
+    </div>
+    <div>
+      <h4>Policies &amp; Legal</h4>
+      <a href="/terms">Terms &amp; Conditions</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/cancellation-refund-policy">Cancellation &amp; Refund</a>
+      <a href="/delivery-policy">Delivery Policy</a>
+      <a href="/pricing-disclaimer">Pricing Disclaimer</a>
+      <a href="/return-alteration-policy">Garment Care Guarantee</a>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <div class="contact-line">Customer Care: +91 78922 40243</div>
+      <div class="contact-line">Email: <a href="mailto:connect@laundary.online" style="color:inherit">connect@laundary.online</a></div>
+      <div class="contact-line">Hours: Monday to Sunday, 8:00 AM &ndash; 10:00 PM</div>
+      <div class="contact-line">Office: 2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage, Bengaluru 560038</div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <div class="footer-legal">
+      <p>laundary.online is a brand of STAGE-X, a technology platform connecting customers with partner laundry service providers. Cleaning, pickup and delivery are performed by independent partner laundries; bookings, payments, support and refunds are handled by STAGE-X.<br>
+      Operational Office: 2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage, Bengaluru, Karnataka 560038, India<br>
+      Customer Care: +91 78922 40243 &middot; Email: <a href="mailto:connect@laundary.online">connect@laundary.online</a> &middot; Hours: Monday to Sunday, 8:00 AM &ndash; 10:00 PM<br>
+      Payments on this website are processed by STAGE-X.</p>
+      <p>&copy; 2026 STAGE-X. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('laundry-book-form');
+    const successBox = document.getElementById('book-success');
+    const payBtn = document.getElementById('pay-btn');
+
+    const dateInput = document.getElementById('b-date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+
+        const name = document.getElementById('b-name');
+        const phone = document.getElementById('b-phone');
+        const email = document.getElementById('b-email');
+        const address = document.getElementById('b-address');
+        const city = document.getElementById('b-city');
+        const pincode = document.getElementById('b-pincode');
+        const service = document.getElementById('b-service');
+        const date = document.getElementById('b-date');
+        const slot = document.getElementById('b-slot');
+        const terms = document.getElementById('b-terms');
+
+        if (!/^[a-zA-Z\s]{2,50}$/.test(name.value.trim())) {
+            showErr(name); valid = false;
+        } else hideErr(name);
+
+        if (!/^[6-9]\d{9}$/.test(phone.value.trim())) {
+            showErr(phone); valid = false;
+        } else hideErr(phone);
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+            showErr(email); valid = false;
+        } else hideErr(email);
+
+        if (address.value.trim().length < 5) {
+            showErr(address); valid = false;
+        } else hideErr(address);
+
+        if (!city.value) {
+            showErr(city); valid = false;
+        } else hideErr(city);
+
+        if (!/^\d{6}$/.test(pincode.value.trim())) {
+            showErr(pincode); valid = false;
+        } else hideErr(pincode);
+
+        if (!service.value) {
+            showErr(service); valid = false;
+        } else hideErr(service);
+
+        if (!date.value) {
+            showErr(date); valid = false;
+        } else hideErr(date);
+
+        if (!slot.value) {
+            showErr(slot); valid = false;
+        } else hideErr(slot);
+
+        if (!terms.checked) {
+            terms.focus(); valid = false;
+        }
+
+        if (!valid) return;
+
+        payBtn.disabled = true;
+        payBtn.textContent = 'Opening Secure Gateway...';
+        setTimeout(() => {
+            form.style.display = 'none';
+            successBox.style.display = 'block';
+        }, 800);
+    });
+
+    function showErr(input) {
+        const err = input.parentElement.querySelector('.field-error');
+        if (err) err.style.display = 'block';
+        input.style.borderColor = '#e11d48';
+    }
+    function hideErr(input) {
+        const err = input.parentElement.querySelector('.field-error');
+        if (err) err.style.display = 'none';
+        input.style.borderColor = '#cbd5e1';
+    }
+});
+</script>
+</body>
+</html>

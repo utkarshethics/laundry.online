@@ -23,6 +23,8 @@ const PUBLISH_DIRS = ['assets', 'css', 'js', 'functions'];
 /** Individual files published verbatim. */
 const PUBLISH_FILES = [
   'index.html',
+  'pricing.html',
+  'book.html',
   'about.html',
   'contact.html',
   'terms.html',
