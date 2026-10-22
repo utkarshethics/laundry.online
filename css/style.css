@@ -376,7 +376,7 @@ ul { list-style: none; }
 
 /* ---------- Footer ---------- */
 .footer { background: #0d1630; color: #c6d0e8; }
-.footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 36px; padding: 60px 0 40px; }
+.footer-top { display: grid; grid-template-columns: 1.3fr 0.9fr 0.9fr 1fr 1.1fr; gap: 36px; padding: 60px 0 40px; }
 .footer .brand { color: #fff; margin-bottom: 16px; }
 .footer h4 { color: #fff; margin-bottom: 16px; font-size: 1rem; }
 .footer a { color: #c6d0e8; font-size: 0.92rem; display: block; padding: 5px 0; }
@@ -553,3 +553,68 @@ ul { list-style: none; }
   .form-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
 }
+/* ---------- Legal & Compliance (Payment Gateway Approval) ---------- */
+.footer-legal {
+  width: 100%;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+.footer-legal p { margin: 0 0 0.5rem; }
+.footer-legal a { color: #fff; text-decoration: underline; display: inline; padding: 0; }
+.policy-owner {
+  background: #f0f7ff;
+  border-left: 4px solid var(--primary);
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #16233c;
+  overflow-wrap: anywhere;
+}
+.policy-owner a { text-decoration: underline; color: var(--primary); }
+.policy-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.policy-card h2 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.5rem;
+}
+.policy-card h3 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--ink);
+}
+.policy-card p, .policy-card li {
+  font-size: 0.96rem;
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+.policy-card ul {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+  list-style: disc;
+}
+.policy-card ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+  list-style: decimal;
+}
+.policy-card strong { color: var(--ink); }
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.breadcrumbs a { color: var(--primary); }

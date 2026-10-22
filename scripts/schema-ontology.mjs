@@ -15,7 +15,7 @@ const CANONICAL_BRAND = 'laundry.online';
 const PHONE = '+91-7892240243';
 const PHONE_INTL = '+917892240243';
 const WHATSAPP = 'https://wa.me/917892240243';
-const SUPPORT_EMAIL = 'support@laundry.online';
+const SUPPORT_EMAIL = 'connect@laundry.online';
 const IMAGE = `${ORIGIN}/assets/og-image.webp`;
 
 const CITIES = [
@@ -141,6 +141,8 @@ const globalEntities = () => [
     '@id': `${ORIGIN}/#organization`,
     name: CANONICAL_BRAND,
     alternateName: ['laundary.online', 'Laundry Online India'],
+    legalName: 'STAGE-X',
+    legalName: 'STAGE-X',
     url: `${ORIGIN}/`,
     logo: { '@id': `${ORIGIN}/#logo` },
     image: { '@id': `${ORIGIN}/#logo` },
@@ -188,6 +190,8 @@ const globalEntities = () => [
     '@id': `${ORIGIN}/#localbusiness`,
     name: CANONICAL_BRAND,
     alternateName: 'laundary.online',
+    legalName: 'STAGE-X',
+    legalName: 'STAGE-X',
     url: `${ORIGIN}/`,
     image: { '@id': `${ORIGIN}/#logo` },
     logo: { '@id': `${ORIGIN}/#logo` },
@@ -206,10 +210,10 @@ const globalEntities = () => [
     })),
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '12, Service Road, Andheri East',
-      addressLocality: 'Mumbai',
-      addressRegion: 'Maharashtra',
-      postalCode: '400069',
+      streetAddress: '2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage',
+      addressLocality: 'Bengaluru',
+      addressRegion: 'Karnataka',
+      postalCode: '560038',
       addressCountry: 'IN',
     },
     geo: {
@@ -302,6 +306,48 @@ const pages = [
     name: 'Contact laundry.online — Customer Support, Pickups & Franchise',
     description:
       'Reach laundry.online customer care, book an on-demand laundry pickup slot, or explore franchise partnership opportunities.',
+  },
+  {
+    file: 'terms.html',
+    path: '/terms',
+    type: 'WebPage',
+    name: 'Terms & Conditions | laundry.online (a brand of STAGE-X)',
+    description: 'Terms and conditions governing laundry.online doorstep garment care services by STAGE-X.',
+  },
+  {
+    file: 'privacy.html',
+    path: '/privacy',
+    type: 'WebPage',
+    name: 'Privacy Policy | laundry.online (a brand of STAGE-X)',
+    description: 'Privacy policy and DPDP Act 2023 compliance for laundry.online operated by STAGE-X.',
+  },
+  {
+    file: 'cancellation-refund-policy.html',
+    path: '/cancellation-refund-policy',
+    type: 'WebPage',
+    name: 'Cancellation & Refund Policy | laundry.online (a brand of STAGE-X)',
+    description: 'Doorstep pickup cancellation and 24-48 hr refund timelines for laundry.online by STAGE-X.',
+  },
+  {
+    file: 'delivery-policy.html',
+    path: '/delivery-policy',
+    type: 'WebPage',
+    name: 'Doorstep Pickup & Delivery Policy | laundry.online (a brand of STAGE-X)',
+    description: 'Doorstep pickup and delivery timelines and standards for laundry.online by STAGE-X.',
+  },
+  {
+    file: 'pricing-disclaimer.html',
+    path: '/pricing-disclaimer',
+    type: 'WebPage',
+    name: 'Pricing Disclaimer & Rate Card Policy | laundry.online (a brand of STAGE-X)',
+    description: 'Transparent laundry and dry cleaning pricing rate card by STAGE-X.',
+  },
+  {
+    file: 'return-alteration-policy.html',
+    path: '/return-alteration-policy',
+    type: 'WebPage',
+    name: 'Garment Care & Quality Guarantee Policy | laundry.online (a brand of STAGE-X)',
+    description: 'Garment care, 48-hr re-wash guarantee, and loss compensation policy for laundry.online by STAGE-X.',
   },
 ];
 

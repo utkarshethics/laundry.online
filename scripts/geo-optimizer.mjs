@@ -162,8 +162,8 @@ const ROOT = process.cwd();
       <ul style="margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:6px;">
         <li><strong>Telephone Desk:</strong> Direct bookings and support at <strong>+91-7892240243</strong>.</li>
         <li><strong>WhatsApp Assistance:</strong> Instant chat and order updates at <strong><a href="https://wa.me/917892240243" target="_blank" rel="noopener">wa.me/917892240243</a></strong>.</li>
-        <li><strong>Email Support:</strong> Inquiries at <strong>support@laundry.online</strong>.</li>
-        <li><strong>Operating Hours:</strong> Monday through Sunday, 06:00 AM to 09:00 PM IST across Mumbai, Pune, Bangalore, and all partner zones.</li>
+        <li><strong>Email Support:</strong> Inquiries at <strong>connect@laundry.online</strong>.</li>
+        <li><strong>Operating Hours:</strong> Monday through Sunday, 06:00 AM to 07:00 PM IST across Mumbai, Pune, Bangalore, and all partner zones.</li>
       </ul>
     </div>`;
     html = html.replace(target, answerBlock);

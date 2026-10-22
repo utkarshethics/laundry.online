@@ -95,6 +95,7 @@
         "laundary.online",
         "Laundry Online India"
       ],
+      "legalName": "STAGE-X",
       "url": "https://laundary.online/",
       "logo": {
         "@id": "https://laundary.online/#logo"
@@ -104,7 +105,7 @@
       },
       "description": "India’s leading doorstep laundry and eco-friendly dry cleaning network providing free pickup and delivery across Mumbai, Pune, Bangalore, Delhi NCR, and 14+ metro cities.",
       "telephone": "+91-7892240243",
-      "email": "support@laundry.online",
+      "email": "connect@laundry.online",
       "sameAs": [
         "https://wa.me/917892240243",
         "https://www.wikidata.org/wiki/Q849495",
@@ -157,7 +158,7 @@
         "hi",
         "mr"
       ],
-      "url": "https://laundary.online/contact"
+      "url": "https://laundary.online/contact.html"
     },
     {
       "@type": "ImageObject",
@@ -187,6 +188,7 @@
       "@id": "https://laundary.online/#localbusiness",
       "name": "laundry.online",
       "alternateName": "laundary.online",
+      "legalName": "STAGE-X",
       "url": "https://laundary.online/",
       "image": {
         "@id": "https://laundary.online/#logo"
@@ -202,7 +204,7 @@
         "@id": "https://laundary.online/#organization"
       },
       "telephone": "+91-7892240243",
-      "email": "support@laundry.online",
+      "email": "connect@laundry.online",
       "areaServed": [
         {
           "@type": "City",
@@ -267,10 +269,10 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "12, Service Road, Andheri East",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400069",
+        "streetAddress": "2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560038",
         "addressCountry": "IN"
       },
       "geo": {
