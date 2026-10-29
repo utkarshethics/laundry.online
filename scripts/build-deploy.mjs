@@ -29,10 +29,18 @@ const PUBLISH_FILES = [
   'terms.html',
   'privacy.html',
   'cancellation-refund.html',
+  'pricing.html',
+  'pricing-disclaimer.html',
+  'delivery-policy.html',
+  '404.html',
+  '_headers',
+  '_redirects',
   'robots.txt',
   'pay.html',
   'qrcode.min.js',
   'sitemap.xml',
+  'llms.txt',
+  'ontology.json',
   // Cloudflare domain-verification file; must stay reachable at the root.
   '41e6f13d-316e-406c-9820-6b0c949e6374.txt',
 ];
