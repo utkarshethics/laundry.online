@@ -68,7 +68,7 @@
 
   var bookForm = document.getElementById("bookForm");
   if (bookForm) {
-    var PAY_LINK = "https://razorpay.com/payment-link/plink_TfrpceYFPIv3Ch";
+    var PAY_LINK = "/pay.html";
     var payConfirm = document.getElementById("payConfirm");
     var payMsgEl = document.getElementById("payMsg");
     var payWindowOpened = false;
@@ -83,7 +83,7 @@
         if (payMsgEl) {
           payMsgEl.style.color = "#d93025";
           payMsgEl.textContent =
-            "Complete the ₹50 advance in the Razorpay window to place your order, then tick the box above and click again.";
+            "Complete the ₹50 UPI payment on the payment page to place your order, then tick the box above and click again.";
         }
         if (!payWindowOpened) {
           payWindowOpened = true;
