@@ -18,27 +18,21 @@ const ROOT = resolve(process.cwd());
 const OUT = resolve(ROOT, 'dist/site');
 
 /** Directories published verbatim, including Pages Functions. */
-const PUBLISH_DIRS = ['assets', 'css', 'js', 'functions'];
+const PUBLISH_DIRS = ['assets', 'css', 'js', 'functions', 'hi', 'kn', 'ta', 'te', 'mr', 'bn', 'gu'];
 
 /** Individual files published verbatim. */
 const PUBLISH_FILES = [
   'index.html',
-  'pricing.html',
-  'book.html',
   'about.html',
   'contact.html',
+  'franchise.html',
   'terms.html',
   'privacy.html',
-  'cancellation-refund-policy.html',
-  'delivery-policy.html',
-  'pricing-disclaimer.html',
-  'return-alteration-policy.html',
+  'cancellation-refund.html',
   'robots.txt',
+  'pay.html',
+  'qrcode.min.js',
   'sitemap.xml',
-  '_redirects',
-  '_headers',
-  'ontology.json',
-  'llms.txt',
   // Cloudflare domain-verification file; must stay reachable at the root.
   '41e6f13d-316e-406c-9820-6b0c949e6374.txt',
 ];

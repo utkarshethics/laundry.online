@@ -141,42 +141,16 @@
     });
   });
 
-  /* ---------- Contact form (mailto direct dispatch) ---------- */
+  /* ---------- Contact form ---------- */
   var contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      var field = function (id) {
-        var el = contactForm.querySelector(id);
-        return el ? el.value.trim() : "";
-      };
-      var topicSel = contactForm.querySelector("#ctopic");
-      var topic = topicSel && topicSel.selectedIndex >= 0 ? topicSel.options[topicSel.selectedIndex].text : "";
-      var name = field("#cname");
-      var phone = field("#cphone");
-      var email = field("#cemail");
-      var msg = field("#cmsg");
-
-      if (!name || !email || !msg) return;
-
-      var body = [
-        "Name: " + name,
-        "Mobile: " + phone,
-        "Email: " + email,
-        "Topic: " + topic,
-        "",
-        "Message:",
-        msg
-      ].join("\n");
-
-      window.location.href = "mailto:connect@laundry.online?subject=" +
-        encodeURIComponent("laundry.online Inquiry from " + name) +
-        "&body=" + encodeURIComponent(body);
-
       var note = document.getElementById("contactNote");
+      contactForm.querySelectorAll("input, select, textarea, button").forEach(function (el) { el.disabled = true; });
       if (note) {
         note.style.color = "#12a150";
-        note.textContent = "Your email app has been opened with your inquiry addressed to connect@laundry.online. Click Send and our team will reply the same day!";
+        note.textContent = "Thanks! Your message has been sent — we'll get back to you shortly.";
       }
     });
   }
